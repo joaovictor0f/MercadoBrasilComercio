@@ -3,111 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MercadoBrasilComercio</title>
+<title>Mercado Brasil Comércio</title>
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-background:#f2f2f2;
 }
 
-header{
-background:#0057ff;
+body{
+background:#f5f5f5;
+}
+
+/* TOPO */
+
+.topo{
+background:#0a0a0a;
 color:white;
-text-align:center;
-padding:25px;
-font-size:28px;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+flex-wrap:wrap;
+}
+
+.header{
+background:#0b8f2f;
+padding:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.logo{
+color:white;
+font-size:32px;
 font-weight:bold;
 }
 
+.logo span{
+color:yellow;
+}
+
+.pesquisa{
+flex:1;
+display:flex;
+max-width:500px;
+}
+
+.pesquisa input{
+flex:1;
+padding:12px;
+border:none;
+outline:none;
+font-size:16px;
+border-radius:5px 0 0 5px;
+}
+
+.pesquisa button{
+padding:12px 20px;
+border:none;
+background:black;
+color:white;
+font-weight:bold;
+border-radius:0 5px 5px 0;
+}
+
+/* MENU */
+
+.menu{
+background:#111;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* BANNER */
+
 .banner{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
+background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1200&auto=format&fit=crop') center/cover;
+height:400px;
+display:flex;
+align-items:center;
+padding:40px;
+color:white;
+}
+
+.banner-texto{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:20px;
+max-width:500px;
+}
+
+.banner h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.banner button{
+padding:15px 30px;
+border:none;
+background:yellow;
+font-size:20px;
+font-weight:bold;
+border-radius:10px;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.cat{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* PRODUTOS */
+
+.titulo{
+font-size:35px;
+padding:20px 30px;
+font-weight:bold;
 }
 
 .produtos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-padding:25px;
+padding:30px;
 }
 
 .card{
 background:white;
-border-radius:20px;
 padding:20px;
+border-radius:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 text-align:center;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
 }
 
 .card img{
 width:100%;
 height:220px;
 object-fit:cover;
-border-radius:15px;
+border-radius:10px;
+}
+
+.nome{
+font-size:20px;
+margin:15px 0;
+font-weight:bold;
 }
 
 .preco{
-color:red;
-font-size:26px;
+font-size:30px;
+color:#0b8f2f;
 font-weight:bold;
-margin:20px 0;
+margin-bottom:15px;
 }
 
 .botao{
-background:green;
-color:white;
-padding:15px 25px;
-border-radius:12px;
 display:inline-block;
+padding:12px 25px;
+background:#0b8f2f;
+color:white;
 text-decoration:none;
-font-size:22px;
+border-radius:10px;
 font-weight:bold;
 }
 
-footer{
-background:#0057ff;
+/* PROMOÇÃO */
+
+.promocao{
+margin:40px 30px;
+background:linear-gradient(90deg,#0b8f2f,#111);
+padding:50px;
+border-radius:20px;
 color:white;
 text-align:center;
-padding:25px;
-font-size:22px;
-margin-top:30px;
 }
 
-</style>
-</head>
+.promocao h2{
+font-size:50px;
+color:yellow;
+margin-bottom:15px;
+}
 
-<body>
+/* FOOTER */
 
-<header>
-MercadoBrasilComercio
-</header>
+footer{
+background:#111;
+color:white;
+padding:40px;
+margin-top:40px;
+}
 
-<img class="banner" src="file_000000008d9471f59411d2a3cc730..." alt="Banner">
+.rodape{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
 
-<section class="produtos">
-
-<div class="card">
-<img src="file_00000000db34720eb074fbaaa5628..." alt="">
-<div class="preco">50% OFF</div>
-<a class="botao" href="#">Comprar Agora</a>
-</div>
-
-<div class="card">
-<img src="file_000000009b24720ebb0de2160b07a..." alt="">
-<div class="preco">OFERTA ESPECIAL</div>
-<a class="botao" href="#">Comprar Agora</a>
-</div>
-
-</section>
-
-<footer>
-Frete Grátis em Todos os Pedidos
-</footer>
-
-</body>
-</html>
+footer h3
